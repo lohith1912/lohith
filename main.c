@@ -1,0 +1,5 @@
+    main()
+{
+	fibonacci();
+	factorial();
+}
