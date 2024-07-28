@@ -2,4 +2,5 @@
 {
 	fibonacci();
 	factorial();
+	add();
 }

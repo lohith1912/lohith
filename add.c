@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main() {
+       add() {
     int n, i, sum = 0;
 
     printf("Enter a positive integer: ");
