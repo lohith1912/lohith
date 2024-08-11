@@ -1,0 +1,47 @@
+pipeline{
+agent any
+stages{
+  stage('BUILD'){
+steps{
+sh '''' echo "Pipeline job is runnin"
+echo "Pipeline is in BUILD Stage"
+sleep 5
+'''
+  }
+}
+  stage('DEPLOY'){
+steps{
+sh ''' echo "Pipeline is DEPLOY Stage"
+sleep 5'''
+  }
+}
+stage ('TEST') {
+steps{
+sh ''' echo "Pilpeline is TEST Stage"
+sleep 5'''
+}
+}
+}
+post{
+always{
+echo "Pipeline job is completed"
+}
+success{
+mail to:'ABC@gmail.com',
+subject:'The pipeline succeeded',
+body:'The pipeline is completed and succesfull'.
+}
+failure{
+echo "The pipeline is failed"
+}
+unstable{
+echo "The pipeline is unstable"
+}
+chnaged{
+echo "The pipeline is unstable"
+}
+changed{
+echo -e " The result of the pipeline has changed from lastrun"
+}
+}
+}
